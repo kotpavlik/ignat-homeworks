@@ -10,6 +10,8 @@ type PropsType = {
 
 function Message(props: PropsType) {
     return (
+
+
         <div className={s.message_wrapper}>
             <div className={s.avatar_block}>
                 <img src={props.avatar} alt=""/>
