@@ -3,6 +3,8 @@
     flex-direction: row;
     width: 100%;
     height: 100%;
+    background-color: #ffe6e6;
+    padding: 10px;
 }
 
 .avatar_block {
@@ -15,6 +17,7 @@
     height: 100px;
     transition-duration: 0.5s;
     z-index: 50;
+    background-color: #fff;
 }
 
 .avatar_block > img {
@@ -73,6 +76,9 @@
 .name::selection {
     background: transparent;
 }
+.avatar_block>img::selection {
+    background: transparent;
+}
 .messages {
     padding: 10px;
     font-size: 15px;
@@ -85,6 +91,8 @@
     border-radius: 1em;
     position: relative;
     line-height: 1.5em;
+    box-shadow: 4px 2px 3px grey;
+
 }
 
 .message_block::after, div::before {
@@ -92,11 +100,12 @@
     position: absolute;
     right: 100%;
     bottom: .5em;
-    width: 1.8em;
-    height: 1.8em;
-    border: .5em solid white;
+    width: 5.5em;
+    height:4em;
+
+    border: .5em solid #ffe6e6;
     border-radius: 50%;
-    background: #ffffff;
+    background-color:#ffe6e6;
 }
 
 .message_block::before {

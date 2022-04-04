@@ -1,0 +1,41 @@
+
+
+.link>h1>a{
+    color: #000;
+    text-decoration: none;
+
+}
+.link>h1{
+    text-align: center;
+}
+
+a.tooltip {
+    color: #000;
+    text-decoration: none;
+    text-shadow: -4px 2px 2px pink;
+
+}
+a.tooltip:hover {
+    cursor: pointer;
+    position: relative;
+    text-shadow: none;
+}
+a.tooltip span {
+    display: none;
+
+}
+a.tooltip:hover span {
+    border: #000000 1px solid;
+    padding: 5px 20px 5px 5px;
+    display: block;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.51);
+    left:350px;
+    margin: 10px;
+    width: 150px;
+    position: absolute;
+    top: -15px;
+    text-shadow: -4px 2px 2px pink;
+
+}
+
