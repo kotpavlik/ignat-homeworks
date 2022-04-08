@@ -7,7 +7,7 @@ function AlternativeMessage() {
             <h1>
                 <a className={s.tooltip} href="https://github.com/kotpavlik/Ts-React-Redux/tree/master/src">
                     Git with messages page
-                <span>  Tap here</span></a></h1>
+                    <span>  Tap here</span></a></h1>
 
 
         </div>
