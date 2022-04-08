@@ -1,0 +1,18 @@
+.wrapper_affair{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.butt {
+    margin: 3px 0;
+}
+.name{
+    transition: all 0.5s
+}
+.name:hover {
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.38);
+    color: #ff71d2;
+    transform: scale(1.2);
+    transition: all 0.5s;
+    cursor:pointer;
+}

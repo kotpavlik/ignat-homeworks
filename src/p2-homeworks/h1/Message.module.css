@@ -46,6 +46,7 @@
 .message_block {
     display: flex;
     flex-direction: row;
+
     /*border: 1px solid black;*/
     /*padding: 5px;*/
     /*width: 20%;*/
@@ -95,26 +96,26 @@
 
 }
 
-.message_block::after, div::before {
+.message_block::after, .message_block::before {
     content: "";
     position: absolute;
     right: 100%;
-    bottom: .5em;
-    width: 5.5em;
-    height:4em;
-
+    bottom: .1em;
+    width: 2em;
+    height:2em;
     border: .5em solid #ffe6e6;
     border-radius: 50%;
     background-color:#ffe6e6;
 }
 
 .message_block::before {
+
     border-top: none;
     height: .9em;
     border-radius: 0 0 50% 50% / 0 0 100% 100%;
     background: rgba(213, 245, 255, 0.71);
     border-color: rgba(213, 245, 255, 0.71);
-    margin-right: -.9em;
+    margin-right: -.7em;
 } 
 .time {
     font-size: 10px;

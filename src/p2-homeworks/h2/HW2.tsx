@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Affairs from './Affairs'
+import style from './HW.module.css'
 import AlternativeAffairs from './AlternativeAffairs';
 
 
@@ -37,7 +38,7 @@ function HW2() {
     const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id))
 
     return (
-        <div>
+        <div className={style.all_wrapper}>
 
             <Affairs
                 data={filteredAffairs}
