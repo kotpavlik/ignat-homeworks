@@ -11,6 +11,7 @@ test('find text "test message name"', () => {
             time=""
         />
     ))
+    // eslint-disable-next-line testing-library/prefer-screen-queries
     const linkElement = getByText(/test message name/i)
     expect(linkElement).toBeInTheDocument()
 })

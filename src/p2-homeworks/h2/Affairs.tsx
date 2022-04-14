@@ -37,11 +37,13 @@ function Affairs(props: AffairsPropsType) {
         <div className={style.wrapper_all}>
 
             <div className={style.list}>{mappedAffairs}</div>
-            <div className="uk-button-group">
-                <button className="uk-button uk-button-default" onClick={setAll}>All</button>
-                <button className="uk-button uk-button-default" onClick={setHigh}>High</button>
-                <button className="uk-button uk-button-default" onClick={setMiddle}>Middle</button>
-                <button className="uk-button uk-button-default" onClick={setLow}>Low</button>
+            <div className={style.button_wrap_down}>
+                <div className="uk-button-group">
+                    <button className="uk-button uk-button-default" onClick={setAll}>All</button>
+                    <button className="uk-button uk-button-default" onClick={setHigh}>High</button>
+                    <button className="uk-button uk-button-default" onClick={setMiddle}>Middle</button>
+                    <button className="uk-button uk-button-default" onClick={setLow}>Low</button>
+                </div>
             </div>
         </div>
     )
