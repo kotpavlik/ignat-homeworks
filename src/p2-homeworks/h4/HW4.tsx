@@ -10,9 +10,9 @@ function HW4() {
 
     const showAlert = () => {
         if (error) {
-            alert('введите текст...')
+            alert('Напишите что-нибудь')
         } else {
-            alert(text) // если нет ошибки показать текст
+            alert(text)
         }
     }
 
@@ -30,14 +30,14 @@ function HW4() {
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    // spanClassName={s.testSpanError}
+                    spanClassName={s.testSpanError}
                 />
 
                 <SuperInputText
-                    className={s.blue} // проверьте, рабоет ли смешивание классов
+                    className={s.blue}
                 />
 
-                {/*----------------------------------------------------*/}
+                ----------------------------------------------------
 
                 <SuperButton>
                     default

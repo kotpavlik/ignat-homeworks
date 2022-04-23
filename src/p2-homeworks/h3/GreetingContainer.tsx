@@ -31,7 +31,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
 
     const onKeyPressInput = (e:KeyboardEvent<HTMLInputElement>) => {
         console.log('addUser: ', e)
-        if (e.ctrlKey && e.charCode === 13) {
+        if (e.ctrlKey && e.key === 'Enter') {
             addUser();
         }
     }
