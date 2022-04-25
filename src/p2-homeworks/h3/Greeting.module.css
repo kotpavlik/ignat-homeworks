@@ -101,12 +101,13 @@
 .wrapper_for_overflow {
     position: relative;
     padding: 10px 10px;
-    margin: 0 auto;
+    margin: 0px auto;
     left: 35px;
     max-height: 20px;
     overflow: auto;
     border: 1px solid rgba(0, 0, 0, 0.36);
     max-width: 250px;
+    min-height: 200px;
     text-align: center;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -119,4 +120,5 @@
 }
 .wrapper_for_overflow::-webkit-scrollbar {
     width: 0;
+
 }
