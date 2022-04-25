@@ -1,4 +1,4 @@
-import React, {ChangeEvent,KeyboardEvent} from 'react'
+import React, {ChangeEvent, KeyboardEvent} from 'react'
 import s from './Greeting.module.css'
 import {UserType} from './HW3';
 
@@ -9,12 +9,12 @@ type GreetingPropsType = {
     error: string
     totalUsers: number
     users: Array<UserType>
-    onKeyPressInput: (e:KeyboardEvent<HTMLInputElement>) => void
+    onKeyPressInput: (e: KeyboardEvent<HTMLInputElement>) => void
 }
 
 
 const Greeting: React.FC<GreetingPropsType> = (
-    {name, setNameCallback, addUser, error, totalUsers, users,onKeyPressInput} // деструктуризация пропсов
+    {name, setNameCallback, addUser, error, totalUsers, users, onKeyPressInput} // деструктуризация пропсов
 ) => {
     const inputClass = error ? s.error : s.input
 
@@ -22,7 +22,12 @@ const Greeting: React.FC<GreetingPropsType> = (
         <div className={s.wrapper}>
             <div className={s.wrapper_input}>
                 <span className={s.span_total_user}>{totalUsers} names</span>
-                <input value={name} onChange={setNameCallback} onKeyPress={onKeyPressInput} className={inputClass} />
+                <input
+                    value={name}
+                    onChange={setNameCallback}
+                    onKeyPress={onKeyPressInput}
+                    className={inputClass}
+                    placeholder="write please"/>
                 <span className={s.span_error}>{error}</span>
                 <button className={s.button} onClick={addUser}>add</button>
             </div>

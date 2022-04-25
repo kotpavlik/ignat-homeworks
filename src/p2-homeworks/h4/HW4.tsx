@@ -6,13 +6,21 @@ import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
 
 function HW4() {
     const [text, setText] = useState<string>('')
-    const error = text ? '' : 'error'
+    const error = text ? '' : 'Введите текст'
 
     const showAlert = () => {
         if (error) {
-            alert('Напишите что-нибудь')
+            alert('Всё удалил, теперь жизнь как с чистого листа')
         } else {
             alert(text)
+        }
+    }
+    const deleteInputText =() => {
+        if(text) {
+            setText('')
+            alert('Всё удалил, теперь жизнь как с чистого листа')
+        } else {
+            alert('Нечего удалять, напиши что нибудь и потом удалим')
         }
     }
 
@@ -21,9 +29,6 @@ function HW4() {
 
     return (
         <div>
-            <hr/>
-            homeworks 4
-
             <div className={s.column}>
                 <SuperInputText
                     value={text}
@@ -37,7 +42,7 @@ function HW4() {
                     className={s.blue}
                 />
 
-                ----------------------------------------------------
+
 
                 <SuperButton>
                     default
@@ -45,7 +50,7 @@ function HW4() {
 
                 <SuperButton
                     red // пропсу с булевым значением не обязательно указывать true
-                    onClick={showAlert}
+                    onClick={deleteInputText}
                 >
                     delete {/*// название кнопки попадёт в children*/}
                 </SuperButton>
@@ -54,17 +59,17 @@ function HW4() {
                     disabled
                 </SuperButton>
 
-                {/*----------------------------------------------------*/}
+
 
                 <SuperCheckbox
                     checked={checked}
                     onChangeChecked={setChecked}
                 >
-                    some text {/*// этот текст попадёт в children*/}
+                    Я согласен с правилами
                 </SuperCheckbox>
 
-                {/*// onChange тоже должен работать*/}
-                <SuperCheckbox checked={checked} onChange={testOnChange}/>
+
+                <SuperCheckbox checked={checked} onChange={testOnChange} children ='прочитал'/>
             </div>
 
             <hr/>

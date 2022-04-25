@@ -4,10 +4,11 @@
 
 .column {
     display: flex;
-    flex-direction: column;
+    flex-direction: column ;
     align-items: center;
+    margin: 20px;
 }
 
 .testSpanError {
-    color: blue;
+    color: #ff0062;
 }
