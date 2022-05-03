@@ -42,6 +42,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
     return (
         <div className={s.input_wrapper}>
             <input
+                placeholder={'write please'}
                 type={'text'}
                 onChange={onChangeCallback}
                 onKeyPress={onKeyPressCallback}

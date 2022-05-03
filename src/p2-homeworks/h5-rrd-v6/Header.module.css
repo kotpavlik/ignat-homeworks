@@ -1,0 +1,30 @@
+.header_wrapper_nav_links>a{
+    min-height: 60px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.71);
+    font-weight: bold;
+    margin: 10px;
+    transition: all 1s;
+}
+.header_wrapper_nav_img {
+    width: 40px;
+    margin: 10px;
+    transition: all 1s;
+}
+.img_wrapper {
+    min-height: 60px;
+    width: 100px;
+    margin: 0px auto;
+}
+.header_wrapper_nav_links {
+    position: relative;
+    height: 20px;
+    width:350px;
+    margin: 21px auto;
+}
+.activeLink {
+    color: rgb(0, 0, 0) !important;
+    text-shadow: 2px 2px 2px rgba(255, 242, 44, 0.3);
+    font-size: 20px;
+    transition: all 1s;
+}
