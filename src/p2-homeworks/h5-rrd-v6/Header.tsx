@@ -13,22 +13,21 @@ function Header() {
     }
 
     return (
-        menuActive
+
+       <div className = {style.all_header_wrapper}> {menuActive
             ? <div className={style.img_wrapper}>
                 <img
                     onMouseEnter = {menuActiveHandler}
                     className={style.header_wrapper_nav_img} src={cats_logo} alt="no photo"/>
             </div>
             :
-            <div onMouseLeave = {menuActiveHandler} className={style.header_wrapper_nav_links}>
-                <NavLink className={({isActive}) => (isActive ? style.activeLink : ' ')} to={PATH.PRE_JUNIOR}>PRE
-                    JUNIOR</NavLink>
+            <div onMouseLeave={menuActiveHandler} className={style.header_wrapper_nav_links}>
+                <NavLink className={({isActive}) => (isActive ? style.activeLink : ' ')} to={PATH.PRE_JUNIOR}>PRE JUNIOR</NavLink>
                 <NavLink className={({isActive}) => (isActive ? style.activeLink : ' ')}
                          to={PATH.JUNIOR}>JUNIOR</NavLink>
-                <NavLink className={({isActive}) => (isActive ? style.activeLink : ' ')} to={PATH.JUNIOR_PLUS}>JUNIOR
-                    PLUS</NavLink>
-            </div>
-
+                <NavLink className={({isActive}) => (isActive ? style.activeLink : ' ')} to={PATH.JUNIOR_PLUS}>JUNIOR PLUS</NavLink>
+            </div>}
+       </div>
     )
 }
 

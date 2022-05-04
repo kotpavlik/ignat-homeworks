@@ -1,27 +1,58 @@
+.all_header_wrapper {
+    position: relative;
+    height: 60px;
+    min-height: 50px;
+}
 .header_wrapper_nav_links>a{
-    min-height: 60px;
     text-decoration: none;
+    padding: 10px;
     color: rgba(0, 0, 0, 0.71);
     font-weight: bold;
-    margin: 10px;
     transition: all 1s;
 }
 .header_wrapper_nav_img {
     width: 40px;
-    margin: 10px;
     transition: all 1s;
 }
 .img_wrapper {
+    position: absolute;
     min-height: 60px;
     width: 100px;
-    margin: 0px auto;
+    margin: 10px 0;
+    left: 50%;
+    animation-name: logo;
+    animation-duration:2s;
+    animation-iteration-count: 1;
 }
+@keyframes logo {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+  }
 .header_wrapper_nav_links {
-    position: relative;
+    position: absolute;
     height: 20px;
     width:350px;
-    margin: 21px auto;
+    margin: 10px 0;
+    left: 40%;
+    animation-name: menu;
+    animation-duration:2s;
+    animation-iteration-count: 1;
 }
+@keyframes menu {
+    0% {
+        bottom:60px;
+    }
+    100% {
+        bottom:20px;
+    }
+
+
+}
+
 .activeLink {
     color: rgb(0, 0, 0) !important;
     text-shadow: 2px 2px 2px rgba(255, 242, 44, 0.3);
