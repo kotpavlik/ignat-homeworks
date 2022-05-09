@@ -1,0 +1,29 @@
+.spanStyles {
+    font-size: 25px;
+    color: #313131;
+    border: 1px solid rgba(0, 0, 0, 0.11);
+    padding: 20px;
+    box-shadow: -2px 2px 2px black;
+    transition: all 1s;
+    animation-name: mySpan;
+    animation-duration: 2s;
+}
+
+.spanStyles:hover {
+    transform: scale(1.1);
+    box-shadow: -8px 8px 8px black;
+    transition: all 1s;
+}
+
+@keyframes mySpan {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.pencil {
+    margin-right: 20px;
+}
