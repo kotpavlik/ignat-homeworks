@@ -1,0 +1,14 @@
+.XYZ_wrapper {
+    display: block;
+}
+.superSelect {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+.superRadio{
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+
+}

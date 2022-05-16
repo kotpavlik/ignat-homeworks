@@ -1,10 +1,15 @@
-import React, {SelectHTMLAttributes, DetailedHTMLProps, ChangeEvent} from 'react'
+import React, {SelectHTMLAttributes, DetailedHTMLProps} from 'react'
+import {arrType} from '../../HW7';
+import {Box, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent} from '@mui/material';
+
+
 
 type DefaultSelectPropsType = DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>
 
 type SuperSelectPropsType = DefaultSelectPropsType & {
-    options?: any[]
+    options?: arrType
     onChangeOption?: (option: any) => void
+    value? : string
 }
 
 const SuperSelect: React.FC<SuperSelectPropsType> = (
@@ -14,16 +19,32 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
         ...restProps
     }
 ) => {
-    const mappedOptions: any[] = []; // map options with key
 
-    const onChangeCallback = (e: ChangeEvent<HTMLSelectElement>) => {
-        // onChange, onChangeOption
+
+    const onChangeHandler = (e: SelectChangeEvent) => {
+        console.log(e.target.value)
+        onChangeOption && onChangeOption(e.target.value)
+
     }
 
+
     return (
-        <select onChange={onChangeCallback} {...restProps}>
-            {mappedOptions}
-        </select>
+        <Box sx={{ minWidth: 120, maxWidth:200 }}>
+        <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">XYZ</InputLabel>
+            <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={ restProps.value}
+                label="Age"
+                onChange={(e:SelectChangeEvent) => onChangeHandler(e)}
+            >
+                <MenuItem value={"x"}>x</MenuItem>
+                <MenuItem value={"y"}>y</MenuItem>
+                <MenuItem value={"z"}>z</MenuItem>
+            </Select>
+        </FormControl>
+            </Box>
     )
 }
 
