@@ -9,9 +9,9 @@ function HW5() {
             {/*в gh-pages лучше работает HashRouter*/}
             <HashRouter>
 
-            <Header/>
+            <HeaderMemo/>
 
-            <Pages/>
+            <PagesMemo/>
 
             </HashRouter>
         </div>
@@ -19,3 +19,6 @@ function HW5() {
 }
 
 export default HW5
+
+const HeaderMemo = React.memo(Header)
+const PagesMemo = React.memo(Pages)

@@ -8,7 +8,6 @@ export type UserType = {
     name: string
 }
 
-let usersArray = []
 function HW3() {
     const [users, setUsers] = useState<Array<UserType>>([{_id:v1(),name:'Igor'}]) // need to fix any
 
