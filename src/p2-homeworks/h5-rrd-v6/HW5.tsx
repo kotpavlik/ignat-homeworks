@@ -3,6 +3,10 @@ import Header from './Header'
 import Pages from './Pages'
 import {HashRouter} from 'react-router-dom';
 
+const HeaderMemo = React.memo(Header)
+const PagesMemo = React.memo(Pages)
+
+
 function HW5() {
     return (
         <div>
@@ -20,5 +24,3 @@ function HW5() {
 
 export default HW5
 
-const HeaderMemo = React.memo(Header)
-const PagesMemo = React.memo(Pages)
