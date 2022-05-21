@@ -13,7 +13,7 @@ export const homeWorkReducer = (state: UserType, action: allHomeworkACType): Use
             return state
         }
         case 'check': {
-            return state
+            return state.filter(el => el.age > action.age)
         }
         default:
             return state
