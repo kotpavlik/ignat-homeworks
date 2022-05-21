@@ -36,10 +36,12 @@ function HW8() {
     return (
         <div className={style.all_wrapper}>
             {finalPeople}
-            <div className={style.button_group}>
-                <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-                <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
-                <div><SuperButton onClick={Check}>check 18</SuperButton></div>
+            <div className={style.position_button}>
+                <div className={style.button_group}>
+                    <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
+                    <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
+                    <div><SuperButton onClick={Check}>check 18</SuperButton></div>
+                </div>
             </div>
         </div>
     )
