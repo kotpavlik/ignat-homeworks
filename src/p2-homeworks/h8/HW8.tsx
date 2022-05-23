@@ -10,6 +10,8 @@ export type usersObjType = {
     age: number
 }
 
+
+
 const initialPeople: UserType = [
     {_id: 0, name: 'Кот', age: 3},
     {_id: 1, name: 'Александр', age: 66},
