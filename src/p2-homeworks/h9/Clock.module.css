@@ -1,0 +1,73 @@
+.all_wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 30%;
+    max-width: 300px;
+    min-width: 100px;
+    height: 150px;
+    margin: 20px auto;
+    border: 1px solid #666;
+    border-radius: 20px;
+    box-shadow: -6px 6px 10px #666;
+    transition: all 0.5s;
+}
+
+.time {
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid #666;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    width: 150px;
+    margin: 10px auto;
+    box-shadow: -2px 2px 6px #666;
+    transition: all 1s;
+}
+
+.active_time {
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid #666;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    background-color: rgba(28, 138, 2, 0.78);
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    width: 150px;
+    margin: 10px auto;
+    box-shadow: -2px 2px 6px #666;
+    transition: all 1s;
+}
+
+.date {
+    cursor: pointer;
+    position: absolute;
+    font-size: 10px;
+    top:10px;
+    left:112px;
+    user-select: none;
+    animation-name: date;
+    animation-duration:1.5s;
+}
+
+@keyframes date {
+0% {
+    opacity: 0;
+}
+ 100% {
+     opacity: 1;
+ }
+}
+
+.button_wrapper {
+    display: flex;
+    width: 200px;
+    margin: 5px auto;
+    height: 100%;
+    align-items: flex-end;
+    justify-content: center;
+}

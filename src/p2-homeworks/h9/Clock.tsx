@@ -1,6 +1,7 @@
 import moment from 'moment'
 import React, {useState} from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import style from './Clock.module.css'
 
 
 type useStateType = Array<string>
@@ -9,17 +10,18 @@ function Clock() {
 
 
     const [timerId, setTimerId] = useState<number>(0)
-    const [date, setDate] = useState<useStateType>([moment().format('LTS'),moment().format('ll')])
+    const [date, setDate] = useState<useStateType>([moment().format('LTS'), moment().format('ll')])
     const [show, setShow] = useState<boolean>(false)
     const stop = () => {
         clearInterval(timerId)
-        setDate([moment().format('LTS'),moment().format('ll')])
+        setDate([moment().format('LTS'), moment().format('ll')])
+        setTimerId(0)
     }
 
     const start = () => {
         stop()
         const id: number = window.setInterval(() => {
-            setDate([moment().format('LTS'),moment().format('ll')])
+            setDate([moment().format('LTS'), moment().format('ll')])
         }, 1000)
         setTimerId(id)
     }
@@ -36,22 +38,25 @@ function Clock() {
     const stringDate = date[1] // fix with date
 
     return (
-        <div>
-            <div
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-            >
-                {stringTime}
-            </div>
+        <div className={style.all_wrapper}>
 
-            {show && (
-                <div>
-                    {stringDate}
+                <div className={timerId === 0 ? style.time : style.active_time}
+                     onMouseEnter={onMouseEnter}
+                     onMouseLeave={onMouseLeave}
+                >
+                    {stringTime}
+                    {show && (
+                        <div className={ style.date }>
+                            {stringDate}
+                        </div>
+                    )}
                 </div>
-            )}
 
-            <SuperButton onClick={start}>start</SuperButton>
-            <SuperButton onClick={stop}>stop</SuperButton>
+                <div className={style.button_wrapper}>
+                    <SuperButton onClick={start}>start</SuperButton>
+                    <SuperButton disabled={timerId === 0} onClick={stop}>stop</SuperButton>
+                </div>
+
 
         </div>
     )
