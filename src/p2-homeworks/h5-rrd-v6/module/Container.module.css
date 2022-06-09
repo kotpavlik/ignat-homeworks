@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    position: relative;
+    width: 30%;
+    max-width: 300px;
+    min-width: 100px;
+    height: 150px;
+    margin: 20px auto;
+    border: 1px solid #666;
+    border-radius: 20px;
+    box-shadow: -6px 6px 10px #666;
+    transition: all 0.5s;
+}

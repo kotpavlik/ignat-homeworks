@@ -2,6 +2,7 @@ import moment from 'moment'
 import React, {useState} from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 import style from './Clock.module.css'
+import container from '../h5-rrd-v6/module/Container.module.css'
 
 
 type useStateType = Array<string>
@@ -38,7 +39,7 @@ function Clock() {
     const stringDate = date[1] // fix with date
 
     return (
-        <div className={style.all_wrapper}>
+        <div className={container.container}>
 
                 <div className={timerId === 0 ? style.time : style.active_time}
                      onMouseEnter={onMouseEnter}

@@ -4,6 +4,7 @@ import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 import {AppDispatch, AppStoreType} from './bll/store';
 import {loadingAC} from './bll/loadingReducer';
 import s from './HW10.module.css'
+import container from '../h5-rrd-v6/module/Container.module.css'
 import {ExampleAnimation} from './lottie/Lottie';
 
 function HW10() {
@@ -18,7 +19,7 @@ function HW10() {
     };
 
     return (
-        <div className={s.container}>
+        <div className={container.container}>
                 {loading
                     ? (
                         <div  className={s.preloader}><ExampleAnimation/></div>
