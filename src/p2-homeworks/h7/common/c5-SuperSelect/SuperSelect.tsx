@@ -39,9 +39,9 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
                 label="Age"
                 onChange={(e:SelectChangeEvent) => onChangeHandler(e)}
             >
-                <MenuItem value={"x"}>x</MenuItem>
-                <MenuItem value={"y"}>y</MenuItem>
-                <MenuItem value={"z"}>z</MenuItem>
+                <MenuItem value={options && options[0]}>{options && options[0]}</MenuItem>
+                <MenuItem value={options && options[1]}>{options && options[1]}</MenuItem>
+                <MenuItem value={options && options[2]}>{options && options[2]}</MenuItem>
             </Select>
         </FormControl>
             </Box>
