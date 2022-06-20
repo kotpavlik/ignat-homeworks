@@ -5,8 +5,10 @@ import {FormControl, FormControlLabel, FormLabel, Radio, RadioGroup} from '@mui/
 type DefaultRadioPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
 type SuperRadioPropsType = DefaultRadioPropsType & {
-    options?: any[]
-    onChangeOption?: (option: any) => void
+    options?: string[]
+    onChangeOption?: (option:string) => void
+    name?: string
+
 }
 
 const SuperRadio: React.FC<SuperRadioPropsType> = (
@@ -28,16 +30,16 @@ const SuperRadio: React.FC<SuperRadioPropsType> = (
         <>
 
             <FormControl>
-                <FormLabel id="demo-radio-buttons-group-label">XYZ</FormLabel>
+                <FormLabel id="demo-radio-buttons-group-label">{name}</FormLabel>
                 <RadioGroup
                     aria-labelledby="demo-radio-buttons-group-label"
-                    defaultValue="x"
+                    defaultValue={options && options[0]}
                     name="radio-buttons-group"
                     onChange={(e)=>{onChangeCallback(e)}}
                 >
-                    <FormControlLabel value="x" control={<Radio />} label="x" />
-                    <FormControlLabel value="y" control={<Radio />} label="y" />
-                    <FormControlLabel value="z" control={<Radio />} label="z" />
+                    <FormControlLabel value={options && options[0]} control={<Radio />} label={options && options[0]} />
+                    <FormControlLabel value={options && options[1]} control={<Radio />} label={options && options[1]} />
+                    <FormControlLabel value={options && options[2]} control={<Radio />} label={options && options[2]}/>
                 </RadioGroup>
             </FormControl>
         </>
