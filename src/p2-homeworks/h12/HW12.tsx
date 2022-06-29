@@ -1,7 +1,6 @@
 import React from 'react';
 import s from './HW12.module.css';
 import c from '../h5-rrd-v6/module/Container.module.css'
-import SuperCheckbox from '../h4/common/c3-SuperCheckbox/SuperCheckbox';
 import SuperRadio from '../h7/common/c6-SuperRadio/SuperRadio';
 import {useDispatch, useSelector} from 'react-redux';
 import {changeThemeC} from './bll/themeReducer';
